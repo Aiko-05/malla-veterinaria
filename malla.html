@@ -5,101 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medicina Veterinaria</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 20px; }
+    body { font-family: Arial, sans-serif; background: #fdfdfd; margin: 20px; }
     h1 { text-align: center; color: #333; }
     h2 { margin-top: 40px; color: #444; }
-    .year { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    h3 { margin-bottom: 10px; color: #333; }
+
+    .year { margin-bottom: 30px; padding: 10px; border-radius: 10px; }
+    .semesters { display: flex; gap: 20px; justify-content: space-between; }
+    .semester { flex: 1; }
+
     .subject {
-      padding: 15px;
-      border-radius: 10px;
-      width: 200px;
+      background: #ddd;
+      color: #333;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
       text-align: center;
       cursor: pointer;
       transition: 0.3s;
-      position: relative;
-      color: white;
     }
-    .locked { background: #bbb !important; cursor: not-allowed; opacity: 0.5; }
-    .done { border: 2px solid #000; box-shadow: 0 0 10px #000; }
-    .year-1 .subject { background: #4caf50; }
-    .year-2 .subject { background: #f44336; }
-    .year-3 .subject { background: #2196f3; }
-    .year-4 .subject { background: #ff9800; }
-    .year-5 .subject { background: #9c27b0; }
+
+    .locked {
+      background: #ccc !important;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .done {
+      border: 2px solid #333;
+      box-shadow: 0 0 5px #333;
+    }
+
+    .year-1 { background: #A8E6CF; }
+    .year-2 { background: #FF8B94; }
+    .year-3 { background: #8C9EFF; }
+    .year-4 { background: #FFD180; }
+    .year-5 { background: #D1C4E9; }
   </style>
 </head>
 <body>
 
 <h1>Medicina Veterinaria</h1>
 
-<!-- 1° Año -->
 <div class="year year-1">
   <h2>1° Año</h2>
-  <div class="subject unlocked" id="Anatomía Veterinaria I">Anatomía Vet. I</div>
-  <div class="subject unlocked" id="Biofísica">Biofísica</div>
-  <div class="subject unlocked" id="Bioquímica">Bioquímica</div>
-  <div class="subject unlocked" id="Inglés I">Inglés I</div>
-  <div class="subject unlocked" id="Ecología y Recursos Fáunicos">Ecología y Recursos</div>
-  <div class="subject unlocked" id="Anatomía Veterinaria II">Anatomía Vet. II</div>
-  <div class="subject unlocked" id="Histología y Embriología">Histología y Embriología</div>
+  <div class="semesters">
+    <div class="semester">
+      <h3>1º Semestre</h3>
+      <div class="subject unlocked" id="Anatomía Veterinaria I">Anatomía Vet. I</div>
+      <div class="subject unlocked" id="Biofísica">Biofísica</div>
+      <div class="subject unlocked" id="Bioquímica">Bioquímica</div>
+      <div class="subject unlocked" id="Inglés I">Inglés I</div>
+    </div>
+    <div class="semester">
+      <h3>2º Semestre</h3>
+      <div class="subject unlocked" id="Ecología y Recursos Fáunicos">Ecología y Recursos</div>
+      <div class="subject unlocked" id="Anatomía Veterinaria II">Anatomía Vet. II</div>
+      <div class="subject unlocked" id="Histología y Embriología">Histología y Embriología</div>
+    </div>
+  </div>
 </div>
 
-<!-- 2° Año -->
 <div class="year year-2">
   <h2>2° Año</h2>
-  <div class="subject unlocked" id="Bioestadística">Bioestadística</div>
-  <div class="subject locked" data-correlativas="Biofísica,Anatomía Veterinaria II,Bioquímica,Histología y Embriología" id="Fisiología Veterinaria">Fisiología Veterinaria</div>
-  <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Genética">Genética</div>
-  <div class="subject locked" data-correlativas="Bioquímica,Fisiología Veterinaria" id="Nutrición y Alimentación Animal">Nutrición y Alimentación</div>
-  <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Bacteriología Veterinaria">Bacteriología Vet.</div>
-  <div class="subject locked" data-correlativas="Genética,Fisiología Veterinaria" id="Etología">Etología</div>
-  <div class="subject locked" data-correlativas="Inglés I" id="Inglés II">Inglés II</div>
-  <div class="subject locked" data-correlativas="Histología y Embriología,Fisiología Veterinaria" id="Patología General">Patología General</div>
-  <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Inmunología Veterinaria">Inmunología</div>
-  <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Virología y Micología Veterinaria">Virología y Micología</div>
+  <div class="semesters">
+    <div class="semester">
+      <h3>1º Semestre</h3>
+      <div class="subject unlocked" id="Bioestadística">Bioestadística</div>
+      <div class="subject locked" data-correlativas="Biofísica,Anatomía Veterinaria II,Bioquímica,Histología y Embriología" id="Fisiología Veterinaria">Fisiología Veterinaria</div>
+      <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Genética">Genética</div>
+      <div class="subject locked" data-correlativas="Bioquímica,Fisiología Veterinaria" id="Nutrición y Alimentación Animal">Nutrición y Alimentación</div>
+    </div>
+    <div class="semester">
+      <h3>2º Semestre</h3>
+      <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Bacteriología Veterinaria">Bacteriología Vet.</div>
+      <div class="subject locked" data-correlativas="Genética,Fisiología Veterinaria" id="Etología">Etología</div>
+      <div class="subject locked" data-correlativas="Inglés I" id="Inglés II">Inglés II</div>
+      <div class="subject locked" data-correlativas="Histología y Embriología,Fisiología Veterinaria" id="Patología General">Patología General</div>
+      <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Inmunología Veterinaria">Inmunología</div>
+      <div class="subject locked" data-correlativas="Bioquímica,Histología y Embriología" id="Virología y Micología Veterinaria">Virología y Micología</div>
+    </div>
+  </div>
 </div>
 
-<!-- 3° Año -->
 <div class="year year-3">
   <h2>3° Año</h2>
-  <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria" id="Análisis Clínicos">Análisis Clínicos</div>
-  <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria,Inmunología Veterinaria" id="Farmacología y Terapéutica">Farmacología</div>
-  <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria,Anatomía Veterinaria I" id="Semiología y Propedéutica">Semiología</div>
-  <div class="subject locked" data-correlativas="Ecología y Recursos Fáunicos" id="Sociología Rural y Urbana">Sociología Rural</div>
-  <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Enfermedades Infecciosas">Enf. Infecciosas</div>
-  <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Parasitología y Enfermedades Parasitarias">Parasitología</div>
-  <div class="subject locked" data-correlativas="Farmacología y Terapéutica,Semiología y Propedéutica" id="Patología Especial">Patología Especial</div>
-  <div class="subject locked" data-correlativas="Farmacología y Terapéutica,Semiología y Propedéutica,Análisis Clínicos" id="Técnica Quirúrgica">Técnica Quirúrgica</div>
+  <div class="semesters">
+    <div class="semester">
+      <h3>1º Semestre</h3>
+      <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria" id="Análisis Clínicos">Análisis Clínicos</div>
+      <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria,Inmunología Veterinaria" id="Farmacología y Terapéutica">Farmacología</div>
+      <div class="subject locked" data-correlativas="Fisiología Veterinaria,Patología General,Bacteriología Veterinaria,Virología y Micología Veterinaria,Anatomía Veterinaria I" id="Semiología y Propedéutica">Semiología</div>
+      <div class="subject locked" data-correlativas="Ecología y Recursos Fáunicos" id="Sociología Rural y Urbana">Sociología Rural</div>
+    </div>
+    <div class="semester">
+      <h3>2º Semestre</h3>
+      <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Enfermedades Infecciosas">Enf. Infecciosas</div>
+      <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Parasitología y Enfermedades Parasitarias">Parasitología</div>
+      <div class="subject locked" data-correlativas="Farmacología y Terapéutica,Semiología y Propedéutica" id="Patología Especial">Patología Especial</div>
+      <div class="subject locked" data-correlativas="Farmacología y Terapéutica,Semiología y Propedéutica,Análisis Clínicos" id="Técnica Quirúrgica">Técnica Quirúrgica</div>
+    </div>
+  </div>
 </div>
 
-<!-- 4° Año -->
 <div class="year year-4">
   <h2>4° Año</h2>
-  <div class="subject locked" data-correlativas="Patología Especial,Enfermedades Infecciosas" id="Patología Médica">Patología Médica</div>
-  <div class="subject locked" data-correlativas="Técnica Quirúrgica" id="Patología Quirúrgica">Patología Quirúrgica</div>
-  <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas,Genética,Nutrición y Alimentación Animal" id="Producción Avícola">Producción Avícola</div>
-  <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Toxicología Veterinaria">Toxicología</div>
-  <div class="subject locked" data-correlativas="Sociología Rural y Urbana" id="Deontología y Medicina legal">Deontología</div>
-  <div class="subject locked" data-correlativas="Patología Médica" id="Fisiología de la Reproducción y Biotecnologías">Fisiología Reprod.</div>
-  <div class="subject unlocked" id="Producción Apícola">Producción Apícola</div>
-  <div class="subject locked" data-correlativas="Genética,Nutrición y Alimentación Animal,Fisiología de la Reproducción y Biotecnologías,Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas" id="Producción Equina">Producción Equina</div>
-  <div class="subject locked" data-correlativas="Genética,Nutrición y Alimentación Animal,Parasitología y Enfermedades Parasitarias" id="Producción Ovina y Caprina">Producción Ovina/Caprina</div>
-  <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas,Genética,Nutrición y Alimentación Animal,Fisiología de la Reproducción y Biotecnologías" id="Producción Porcina">Producción Porcina</div>
-  <div class="subject unlocked" id="Optativa">Optativa</div>
+  <div class="semesters">
+    <div class="semester">
+      <h3>1º Semestre</h3>
+      <div class="subject locked" data-correlativas="Patología Especial,Enfermedades Infecciosas" id="Patología Médica">Patología Médica</div>
+      <div class="subject locked" data-correlativas="Técnica Quirúrgica" id="Patología Quirúrgica">Patología Quirúrgica</div>
+      <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas,Genética,Nutrición y Alimentación Animal" id="Producción Avícola">Producción Avícola</div>
+      <div class="subject locked" data-correlativas="Farmacología y Terapéutica" id="Toxicología Veterinaria">Toxicología</div>
+    </div>
+    <div class="semester">
+      <h3>2º Semestre</h3>
+      <div class="subject locked" data-correlativas="Sociología Rural y Urbana" id="Deontología y Medicina legal">Deontología</div>
+      <div class="subject locked" data-correlativas="Patología Médica" id="Fisiología de la Reproducción y Biotecnologías">Fisiología Reprod.</div>
+      <div class="subject unlocked" id="Producción Apícola">Producción Apícola</div>
+      <div class="subject locked" data-correlativas="Genética,Nutrición y Alimentación Animal,Fisiología de la Reproducción y Biotecnologías,Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas" id="Producción Equina">Producción Equina</div>
+      <div class="subject locked" data-correlativas="Genética,Nutrición y Alimentación Animal,Parasitología y Enfermedades Parasitarias" id="Producción Ovina y Caprina">Producción Ovina/Caprina</div>
+      <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas,Genética,Nutrición y Alimentación Animal,Fisiología de la Reproducción y Biotecnologías" id="Producción Porcina">Producción Porcina</div>
+      <div class="subject unlocked" id="Optativa">Optativa</div>
+    </div>
+  </div>
 </div>
 
-<!-- 5° Año -->
 <div class="year year-5">
   <h2>5° Año</h2>
-  <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Patología Médica" id="Epidemiología y Salud Pública">Epidemiología</div>
-  <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas" id="Inspección Sanitaria de los Productos Alimenticios">Inspección Sanitaria</div>
-  <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Patología de la Reproducción y Obstetricia">Patología Reprod.</div>
-  <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías,Genética,Nutrición y Alimentación Animal,Parasitología y Enfermedades Parasitarias" id="Producción Bovina">Producción Bovina</div>
-  <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Clínica de Grandes Animales">Clínica Grandes Animales</div>
-  <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Clínica de Pequeños Animales">Clínica Pequeños Animales</div>
-  <div class="subject locked" data-correlativas="Deontología y Medicina legal" id="Economía y Administración Rural">Economía Rural</div>
-  <div class="subject locked" data-correlativas="Ecología y Recursos Fáunicos" id="Zootecnia de Fauna Silvestre y de Zoológicos">Zootecnia Fauna Silvestre</div>
-  <div class="subject locked" data-correlativas="Bioestadística" id="Metodología de la Investigación">Metodología de la Investigación</div>
+  <div class="semesters">
+    <div class="semester">
+      <h3>1º Semestre</h3>
+      <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Patología Médica" id="Epidemiología y Salud Pública">Epidemiología</div>
+      <div class="subject locked" data-correlativas="Parasitología y Enfermedades Parasitarias,Enfermedades Infecciosas" id="Inspección Sanitaria de los Productos Alimenticios">Inspección Sanitaria</div>
+      <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Patología de la Reproducción y Obstetricia">Patología Reprod.</div>
+      <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías,Genética,Nutrición y Alimentación Animal,Parasitología y Enfermedades Parasitarias" id="Producción Bovina">Producción Bovina</div>
+    </div>
+    <div class="semester">
+      <h3>2º Semestre</h3>
+      <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Clínica de Grandes Animales">Clínica Grandes Animales</div>
+      <div class="subject locked" data-correlativas="Fisiología de la Reproducción y Biotecnologías" id="Clínica de Pequeños Animales">Clínica Pequeños Animales</div>
+      <div class="subject locked" data-correlativas="Deontología y Medicina legal" id="Economía y Administración Rural">Economía Rural</div>
+      <div class="subject locked" data-correlativas="Ecología y Recursos Fáunicos" id="Zootecnia de Fauna Silvestre y de Zoológicos">Zootecnia Fauna Silvestre</div>
+      <div class="subject locked" data-correlativas="Bioestadística" id="Metodología de la Investigación">Metodología de la Investigación</div>
+    </div>
+  </div>
 </div>
 
 <script>
